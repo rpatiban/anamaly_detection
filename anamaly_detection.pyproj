@@ -1,0 +1,71 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f9c6335f-b7df-436f-8ebe-001eec224ff9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>src\anamaly_detection.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>anamaly_detection</Name>
+    <RootNamespace>anamaly_detection</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\anamaly_detection.py" />
+    <Compile Include="src\pyBenchmark.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\multiprocessingpool.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\process_log.py" />
+    <Compile Include="src\process_log1.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="insight_testsuite\" />
+    <Folder Include="insight_testsuite\tests\" />
+    <Folder Include="insight_testsuite\tests\test_1\" />
+    <Folder Include="insight_testsuite\tests\test_1\log_input\" />
+    <Folder Include="insight_testsuite\tests\test_1\log_output\" />
+    <Folder Include="log_input\" />
+    <Folder Include="log_output\" />
+    <Folder Include="sample_dataset\" />
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\math.png" />
+    <Content Include="images\social-network.png" />
+    <Content Include="insight_testsuite\.DS_Store" />
+    <Content Include="insight_testsuite\run_tests.sh" />
+    <Content Include="insight_testsuite\tests\.DS_Store" />
+    <Content Include="insight_testsuite\tests\test_1\.DS_Store" />
+    <Content Include="insight_testsuite\tests\test_1\log_input\batch_log.json" />
+    <Content Include="insight_testsuite\tests\test_1\log_input\stream_log.json" />
+    <Content Include="insight_testsuite\tests\test_1\log_output\flagged_purchases.json" />
+    <Content Include="log_input\batch_log.json" />
+    <Content Include="log_input\stream_log.json" />
+    <Content Include="log_output\flagged_purchases.json" />
+    <Content Include="sample_dataset\batch_log.json" />
+    <Content Include="sample_dataset\stream_log.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
